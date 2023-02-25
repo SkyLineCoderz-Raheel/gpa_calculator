@@ -28,11 +28,11 @@ class _OverfilledRadialBarState extends SampleViewState {
     _tooltipBehavior = TooltipBehavior(enable: true);
     chartData = <_ChartData>[
       _ChartData(
-          'Low \n3.5k/6k', 3500, const Color.fromRGBO(235, 97, 143, 1), 'Low'),
-      _ChartData('Average \n7.2k/6k', 7200,
-          const Color.fromRGBO(145, 132, 202, 1), 'Average'),
-      _ChartData('High \n10.5k/6k', 10500,
-          const Color.fromRGBO(69, 187, 161, 1), 'High'),
+          '', 3500,  Color(0xff00B4D8), ''),
+      _ChartData('', 7200,
+           Color(0xff0077B6), ''),
+      _ChartData('', 10500,
+           Color(0xff023E8A), ''),
     ];
     super.initState();
   }
@@ -49,8 +49,8 @@ class _OverfilledRadialBarState extends SampleViewState {
         key: GlobalKey(),
         legend: Legend(
             toggleSeriesVisibility: false,
-            iconHeight: 20,
-            iconWidth: 20,
+            iconHeight: 10,
+            iconWidth: 10,
             overflowMode: LegendItemOverflowMode.wrap),
         annotations: <CircularChartAnnotation>[
           CircularChartAnnotation(
@@ -118,6 +118,6 @@ class _ChartData {
 
   final String x;
   final num? y;
-  final Color color;
+  final Color  color;
   final String text;
 }

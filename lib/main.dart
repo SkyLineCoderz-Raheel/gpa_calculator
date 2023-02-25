@@ -9,8 +9,19 @@ import 'package:easy_gpa_calculator/view/screens/sign_up_details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'helpers/theme_service.dart';
-void main() {
+import 'model/grade.dart';
+import 'model/history.dart';
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter();
+  Hive.registerAdapter(HistoryAdapter());
+  Hive.registerAdapter(GradeAdapter());
+  await Hive.openBox('History');
+  var box= await Hive.openBox('Grade');
+  await Future.delayed(Duration(seconds: 2));
   runApp(const MyApp());
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 }
