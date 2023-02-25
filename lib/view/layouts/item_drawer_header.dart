@@ -42,6 +42,7 @@ class _ItemDrawerHeaderState extends State<ItemDrawerHeader> {
               accountName: Text(
                 "Pinkesh Darji",
                 style: TextStyle(
+                  color: Themes.setColor(context)?Colors.white:Colors.black,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -100,7 +101,7 @@ class _ItemDrawerHeaderState extends State<ItemDrawerHeader> {
             subtitle: Text("Tap to Calculate",style: TextStyle(color: Colors.grey,fontFamily: "Nexa"),),
             trailing: Icon(Icons.navigate_next,color: appColor,),
             onTap: () {
-            Get.to(ScreenUniverstyPortal());
+            Get.to(ScreenRequestPortal());
             },
           ),
           Divider(

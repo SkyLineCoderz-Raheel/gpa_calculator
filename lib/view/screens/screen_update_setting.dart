@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
 import '../../helpers/helper.dart';
+import '../../helpers/theme.dart';
 import '../../widgets/widget_appbar_university.dart';
 import '../layouts/item_drawer_header.dart';
 
@@ -43,7 +44,7 @@ class _ScreenUpdateSettingState extends State<ScreenUpdateSetting> {
           child: Container(
             width: Get.width,
             decoration: BoxDecoration(
-                color: Colors.white, borderRadius: BorderRadius.only(topLeft: Radius.circular(25), topRight: Radius.circular(25))),
+                color:Themes.setColor(context)?Colors.black:Colors.white, borderRadius: BorderRadius.only(topLeft: Radius.circular(25), topRight: Radius.circular(25))),
             child: SingleChildScrollView(
               child: Container(
                 margin: EdgeInsets.symmetric(horizontal: 3.w),
@@ -55,14 +56,14 @@ class _ScreenUpdateSettingState extends State<ScreenUpdateSetting> {
                       child: Center(
                         child:Text(
                           "Set the Percentatge of Grades",
-                          style: TextStyle(color: Color(0xff707070), fontFamily: "Nexa", fontSize: 12.sp, fontWeight: FontWeight.w400),
+                          style: TextStyle(color:Themes.setColor(context)?Colors.white: Color(0xff707070), fontFamily: "Nexa", fontSize: 12.sp, fontWeight: FontWeight.w400),
                         ),
                       ),
                     ),
                     SizedBox(height: 4.h,),
                     Row(
                       children: [
-                        Text("A+Grade",style: TextStyle(color: Colors.grey,fontFamily: "Nexa",fontWeight: FontWeight.bold),
+                        Text("A+Grade",style: TextStyle(color:Themes.setColor(context)?Colors.white: Colors.grey,fontFamily: "Nexa",fontWeight: FontWeight.bold),
                           ),
                         Container(
                           alignment: Alignment.center,
@@ -103,7 +104,7 @@ class _ScreenUpdateSettingState extends State<ScreenUpdateSetting> {
 
                     Row(
                       children: [
-                        Text("A-Grade",style: TextStyle(color: Colors.grey,fontFamily: "Nexa",fontWeight: FontWeight.bold),
+                        Text("A-Grade",style: TextStyle(color: Themes.setColor(context)?Colors.white:Colors.grey,fontFamily: "Nexa",fontWeight: FontWeight.bold),
                         ),
                         Container(
                           alignment: Alignment.center,
@@ -144,7 +145,7 @@ class _ScreenUpdateSettingState extends State<ScreenUpdateSetting> {
 
                     Row(
                       children: [
-                        Text("A Grade",style: TextStyle(color: Colors.grey,fontFamily: "Nexa",fontWeight: FontWeight.bold),
+                        Text("A Grade",style: TextStyle(color:Themes.setColor(context)?Colors.white: Colors.grey,fontFamily: "Nexa",fontWeight: FontWeight.bold),
                         ),
                         Container(
                           alignment: Alignment.center,
@@ -184,7 +185,7 @@ class _ScreenUpdateSettingState extends State<ScreenUpdateSetting> {
                     SizedBox(height: 3.h,),
                     Row(
                       children: [
-                        Text("C Grade",style: TextStyle(color: Colors.grey,fontFamily: "Nexa",fontWeight: FontWeight.bold),
+                        Text("B Grade",style: TextStyle(color:Themes.setColor(context)?Colors.white: Colors.grey,fontFamily: "Nexa",fontWeight: FontWeight.bold),
                         ),
                         Container(
                           alignment: Alignment.center,
@@ -224,7 +225,7 @@ class _ScreenUpdateSettingState extends State<ScreenUpdateSetting> {
                     SizedBox(height: 3.h,),
                     Row(
                       children: [
-                        Text("C Grade",style: TextStyle(color: Colors.grey,fontFamily: "Nexa",fontWeight: FontWeight.bold),
+                        Text("C Grade",style: TextStyle(color:Themes.setColor(context)?Colors.white: Colors.grey,fontFamily: "Nexa",fontWeight: FontWeight.bold),
                         ),
                         Container(
                           alignment: Alignment.center,
@@ -264,7 +265,7 @@ class _ScreenUpdateSettingState extends State<ScreenUpdateSetting> {
                     SizedBox(height: 3.h,),
                     Row(
                       children: [
-                        Text("F Grade",style: TextStyle(color: Colors.grey,fontFamily: "Nexa",fontWeight: FontWeight.bold),
+                        Text("F Grade",style: TextStyle(color:Themes.setColor(context)?Colors.white: Colors.grey,fontFamily: "Nexa",fontWeight: FontWeight.bold),
                         ),
                         Container(
                           alignment: Alignment.center,
